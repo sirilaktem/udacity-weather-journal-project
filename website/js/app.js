@@ -4,7 +4,7 @@ const apiKey = '541edf4d85a8f53fc2d7080a41292ff2&units=imperial&zip=';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth() + 1 +'/'+ d.getDate()+'/'+ d.getFullYear();
+let newDate = d.getMonth() + 1 + '/' + d.getDate() + '/' + d.getFullYear() + ' @' + d.getHours() + ':' + d.getMinutes();
 
 // Event listener to add function to existing HTML DOM element
 document.getElementById('generate').addEventListener('click', performAction);
@@ -64,6 +64,7 @@ const retrieveData = async () =>{
         console.log(allData);
         // Write updated data to DOM elements
         document.getElementById('temp').innerHTML = Math.round(allData.temp)+ '°F';
+        document.getElementById('desc').innerHTML = allData.desc;
         document.getElementById('content').innerHTML = allData.feel;
         document.getElementById('date').innerHTML = allData.date;
         document.getElementById('location').innerHTML = allData.location;
