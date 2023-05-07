@@ -1,0 +1,99 @@
+@import url(global.css);
+
+/* Layout */
+.app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "generator entry";
+}
+
+.generator {
+    grid-area: generator;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entry {
+    grid-area: entry;
+    background: var(--gray-50);
+}
+
+.brand img {
+    margin: 0 auto;
+}
+
+.generator-holder {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.app-title {
+    font: var(--font-semibold) var(--display-sm) var(--font-family);
+    color: var(--gray-900);
+    align-self: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.entry-holder {
+    min-height: 93.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.note {
+    text-decoration: none;
+    color: #000;
+    background: var(--primary-400);
+    width: 70%;
+    padding: 1em;
+    margin-top: 2rem;
+    transform: rotate(-2deg);
+    box-shadow: var(--shadow-lg);
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas: "left-head . right-head"
+        "content content content";
+}
+
+.left-head {
+    grid-area: left-head;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-head {
+    grid-area: right-head;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#date,
+#location {
+    font: var(--font-semibold) var(--text-lg) var(--font-family);
+}
+
+#temp,
+#desc {
+    font: var(--font-semibold) var(--text-xl) var(--font-family);
+    color: #fff;
+}
+
+#content {
+    grid-area: content;
+    font: var(--font-regular) var(--display-sm) var(--font-family-write);
+    margin-top: 1rem;
+}

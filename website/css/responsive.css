@@ -1,0 +1,19 @@
+/* Mobile Phone */
+@media(max-width: 991px) {
+
+    /* Layout */
+    .app {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "generator"
+            "entry";
+    }
+
+    .entry-holder {
+        min-height: 50vh;
+    }
+
+    .generator-holder {
+        width: 100%;
+    }
+}
