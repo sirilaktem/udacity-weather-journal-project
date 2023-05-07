@@ -33,5 +33,23 @@ app.listen(port, listening);
 // Initialize all route with a callback function
 
 // Callback function to complete GET '/all'
+app.get('/all', function (req, res) {
+    res.send(projectData);
+});
 
 // Post Route
+app.post('/addJournal', addJournal);
+
+function addJournal(req, res){
+    projectData = {
+        date: req.body.date,
+        temp: req.body.temp,
+        feel: req.body.feel,
+        location: req.body.location,
+        desc: req.body.desc,
+        icon: req.body.icon
+    }
+
+    res.send(projectData);
+    console.log(projectData);
+}

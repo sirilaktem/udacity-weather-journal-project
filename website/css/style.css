@@ -52,10 +52,10 @@ form {
 }
 
 .note {
-    text-decoration: none;
     color: #000;
     background: var(--primary-400);
     width: 70%;
+    min-height: 50vh;
     padding: 1em;
     margin-top: 2rem;
     transform: rotate(-2deg);
