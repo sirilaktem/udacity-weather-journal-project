@@ -18,7 +18,7 @@ function performAction(e){
 
     getWeatherData(baseURL, newLocation, apiKey)
     .then(function(data){
-        console.log(data);
+        //console.log(data);
         postData('/addJournal',{date:newDate, temp:data.main.temp, feel:newFeel, location:data.name, desc:data.weather[0].main, icon:data.weather[0].icon});
         retrieveData();
     });
@@ -29,7 +29,7 @@ const getWeatherData = async (baseURL, zip, key)=>{
     const res = await fetch(baseURL + key + zip);
     try {
         const data = await res.json();
-        console.log(data);
+        //console.log(data);
         return data;
     }catch(error){
         console.log('error', error);
@@ -48,7 +48,7 @@ const postData = async (url = '', data = {}) => {
     });
     try{
         const newData = await response.json();
-        console.log(newData);
+        //console.log(newData);
         return newData;
     }catch(error){
         console.log('error', error);
@@ -61,7 +61,7 @@ const retrieveData = async () =>{
     try {
         // Transform into JSON
         const allData = await request.json();
-        console.log(allData);
+        //console.log(allData);
         // Write updated data to DOM elements
         document.getElementById('temp').innerHTML = Math.round(allData.temp)+ '°F';
         document.getElementById('desc').innerHTML = allData.desc;
