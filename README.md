@@ -37,7 +37,11 @@ When everything is set, start the server by running this commend:
   node server.js
 ```
 
+Register and generate the API key through [https://openweathermap.org/](OpenWeather) website and update the API key on app.js file.
+
 Then please access the application through [http://localhost:8000](http://localhost:8000)
+
+Please note that this app aims to learn how the API and client/server scripts work together. So the API key might be exposed on the client side, which is not recommended to do on production environment.
 
 # Usage
 [(Back to top)](#table-of-contents)
